@@ -51,7 +51,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %changelog
 
-* Mon Aug 29 2011 Fl@sh <kaperang07@gmail.com> - 1.1.12-4
+* Tue Aug 30 2011 Fl@sh <kaperang07@gmail.com> - 1.1.12-4
 - added get source script
 
 * Mon Aug 29 2011 Fl@sh <kaperang07@gmail.com> - 1.1.12-3

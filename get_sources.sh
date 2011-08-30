@@ -2,7 +2,7 @@
 
 NAME=kde-plasma-mail-checker
 GIT_NAME=plasmaMailChecker
-COMMIT="afef501b1c5fb1d9e1f0"
+COMMIT="6c54ebcb55a16d901abf"
 
 git clone -q git://github.com/F1ash/${GIT_NAME}.git
 

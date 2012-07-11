@@ -1,5 +1,5 @@
 Name: kde-plasma-mail-checker
-Version: 1.5.25
+Version: 1.6.27
 Release: 1%{?dist}
 Summary: KDE Plasmoid for periodically checking a new messages in the mailboxes list.
 Summary(ru): Плазмоид периодически проверяет наличие новых писем в списке почтовых ящиков.
@@ -16,7 +16,7 @@ BuildRequires: qt-devel
 %description
 kde-plasma-mail-checker
 Plasmoid should periodic check for new messages in configured accounts.
-Supported protocols: POP3/POP3S/IMAP4/IMAP4S.
+Supported protocols: POP3/POP3S/IMAP4/IMAP4S + IMAP4_IDLE.
 Passwords for accounts stored in encrypted container.
 Plasmoid use KDE-notification for events about new mail.
 Support Akonadi (mimeType : "message/rfc822") resources monitoring
@@ -26,7 +26,7 @@ Support Akonadi (mimeType : "message/rfc822") resources monitoring
 kde-plasma-mail-checker
 Плазмоид периодически проверяет наличие новых писем
 в списке почтовых ящиков.
-Поддерживаются POP3\IMAP4 протоколы с None\SSL аутентификацией.
+Поддерживаются POP3\IMAP4(+IDLE) протоколы с None\SSL аутентификацией.
 Пароли к почтовым ящикам содержатся в зашифрованном виде.
 Плазмоид использует KDE-оповещение.
 Плазмоид может отслеживать получение новой почты средствами Akonadi.
@@ -50,6 +50,9 @@ make install DESTDIR=$RPM_BUILD_ROOT/usr
 rm -rf $RPM_BUILD_ROOT
 
 %changelog
+* Wed Jul 11 2012 Fl@sh <kaperang07@gmail.com> - 1.6.27-1
+- improved description
+- version updated
 
 * Sun Jun 24 2012 Fl@sh <kaperang07@gmail.com> - 1.5.25-1
 - version updated

@@ -1,6 +1,6 @@
 Name: kde-plasma-mail-checker
-Version: 1.7.40
-Release: 2%{?dist}
+Version: 1.8.45
+Release: 1%{?dist}
 Summary: KDE Plasmoid for periodically checking a new messages in the mailboxes list
 Summary(ru): Плазмоид периодически проверяет наличие новых писем в списке почтовых ящиков
 Group: Applications/Internet
@@ -22,6 +22,7 @@ Passwords for accounts stored in encrypted container.
 Plasmoid use KDE-notification for events about new mail.
 Support Akonadi (mimeType : "message/rfc822") resources monitoring
 (getting new mail).
+Support integrated mail viewer (for non-Akonadi accounts).
 
 %description -l ru
 kde-plasma-mail-checker
@@ -31,6 +32,7 @@ kde-plasma-mail-checker
 Пароли к почтовым ящикам содержатся в зашифрованном виде.
 Плазмоид использует KDE-оповещение.
 Плазмоид может отслеживать получение новой почты средствами Akonadi.
+Есть встроенный просмотрщик почты (для обычных аккаунтов).
 
 %prep
 %setup -q
@@ -47,7 +49,13 @@ make install DESTDIR=$RPM_BUILD_ROOT/usr
 %doc README README_RU COPYING
 
 %changelog
-* Mon Sep 24 2012 Fl@sh <kaperang07@gmail.com> - 1.7.40-2
+* Wed Oct 31 2012 Fl@sh <kaperang07@gmail.com> - 1.8.45-1
+- version updated
+
+* Tue Oct 2 2012 Fl@sh <kaperang07@gmail.com> - 1.7.41-1
+- version updated
+
+* Mon Sep 24 2012 Fl@sh <kaperang07@gmail.com> - 1.7.40-1
 - version updated
 
 * Wed Sep 5 2012 Fl@sh <kaperang07@gmail.com> - 1.7.39-1

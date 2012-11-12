@@ -49,7 +49,7 @@ make install DESTDIR=$RPM_BUILD_ROOT/usr
 %doc README README_RU COPYING Changelog
 
 %changelog
-* Mov Nov 12 2012 Fl@sh <kaperang07@gmail.com> - 1.8.48-3
+* Mon Nov 12 2012 Fl@sh <kaperang07@gmail.com> - 1.8.48-3
 - release changed
 
 * Mon Nov 5 2012 Fl@sh <kaperang07@gmail.com> - 1.8.48-1

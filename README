@@ -1,13 +1,14 @@
 # LANG=en_US.UTF-8
 
 Dependencies:
-	kdebase-workspace-python-applet (Fedora package name)
-	M@ilChecker uses default wallet or an alternative, if specified.
+	kdebase-workspace-python-applet (Fedora14 package name)
 
 Paths and files:
 	Error log file: $HOME/.xsession-errors
 	Debug log file: /tmp/outMailChecker_%Y_%m_%d_%H:%S.log
 	Configuration file: $HOME/.config/plasmaMailChecker/plasmaMailChecker.conf
+	Filter files: $HOME/.config/plasmaMailChecker/filter.from,
+		$HOME/.config/plasmaMailChecker/filter.subj
 
 Path for your POP3 accounts uidl cache:
 		$HOME/.cache/plasmaMailChecker/<accountName>.cache
@@ -16,7 +17,7 @@ Path for your POP3 accounts uidl cache:
 
 Start/stop mail checking in plasmoid.
 	Click on mailers icon to start or stop checking.
-
+M@ilChecker uses default wallet or an alternative, if specified.
 
 Description:
 	Plasmoid should periodic check for new messages in configured accounts.
@@ -26,6 +27,7 @@ Description:
 	It one maybe contain in plasma workspace and in plasma panel.
 	Support Akonadi (mimeType : "message/rfc822") resources monitoring
 	(getting new mail).
+	Support integrated mail viewer (for non-Akonadi accounts).
 	Command line of Akonadi account must be used for execution of console command
 	(different from plasmoid process) - "View" in notification of some mail.
 	See for : EXAMPLES.
@@ -37,4 +39,4 @@ Notes:
 Known issues:
 	If you internet connection is too slow, you need increase time value in "Autoexit of connect" parameter.
 
-Tested on Fedora 14 (kdebase-workspace-python-applet-4.5.3-3.fc14.x86_64), Fedora15, Fedora16, Fedora17
+Tested on Fedora14 (kdebase-workspace-python-applet-4.5.3-3.fc14.x86_64) -- Fedora18

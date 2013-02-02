@@ -1,15 +1,15 @@
 Name: kde-plasma-mail-checker
-Version: 1.8.48
-Release: 5%{?dist}
+Version: 1.10.50
+Release: 1%{?dist}
 Summary: KDE Plasmoid for periodically checking a new messages in the mailboxes list
 Summary(ru): Плазмоид периодически проверяет наличие новых писем в списке почтовых ящиков
 Group: Applications/Internet
 License: GPLv2+
-Source0: http://cloud.github.com/downloads/F1ash/plasmaMailChecker/%{name}-%{version}.tar.bz2
+Source0: https://github.com/F1ash/plasmaMailChecker/archive/%{name}-%{version}.tar.gz
 URL: https://github.com/F1ash/plasmaMailChecker
 BuildArch: noarch
 
-Requires: PyKDE4, python-SocksiPy
+Requires: PyKDE4, python-SocksiPy, python-mailer
 BuildRequires: kde-filesystem
 # for building the translator`s dictionary
 BuildRequires: qt4-devel
@@ -22,7 +22,8 @@ Passwords for accounts stored in encrypted container.
 Plasmoid use KDE-notification for events about new mail.
 Support Akonadi (mimeType : "message/rfc822") resources monitoring
 (getting new mail).
-Support integrated mail viewer (for non-Akonadi accounts).
+Support preview (integrated mail viewer) for non-Akonadi accounts
+and Quick Answer & Forward Mail.
 
 %description -l ru
 kde-plasma-mail-checker
@@ -32,7 +33,8 @@ kde-plasma-mail-checker
 Пароли к почтовым ящикам содержатся в зашифрованном виде.
 Плазмоид использует KDE-оповещение.
 Плазмоид может отслеживать получение новой почты средствами Akonadi.
-Есть встроенный просмотрщик почты (для обычных аккаунтов).
+Есть встроенный предпросмотр почты для обычных аккаунтов
+с возможностью быстрого ответа и пересылки.
 
 %prep
 %setup -q
@@ -49,14 +51,11 @@ make install DESTDIR=$RPM_BUILD_ROOT/usr
 %doc README README_RU COPYING Changelog
 
 %changelog
-* Wed Nov 14 2012 Fl@sh <kaperang07@gmail.com> - 1.8.48-5
-- release changed
+* Tue Jan 24 2013 Fl@sh <kaperang07@gmail.com> - 1.10.50-1
+- version updated
 
 * Mon Nov 5 2012 Fl@sh <kaperang07@gmail.com> - 1.8.48-1
 - version updated
-
-* Fri Nov 2 2012 Fl@sh <kaperang07@gmail.com> - 1.8.47-3
-- release changed
 
 * Thu Nov 1 2012 Fl@sh <kaperang07@gmail.com> - 1.8.47-1
 - version updated
